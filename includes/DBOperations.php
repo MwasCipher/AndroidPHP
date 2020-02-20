@@ -5,7 +5,11 @@
 
         function __construct()
         {
-            require_once(__FILE__).'/DBConnection.php';
+            require_once dirname(__FILE__).'/DBConnection.php';
+
+            $db = new DBConnection();
+
+            $this->con = $db->connect();
         }
 
     }
